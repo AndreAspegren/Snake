@@ -24,8 +24,9 @@ void run()
             if (check.collision(show.snakePosition, show.height / 2 - 1, show.width)) break;
             if (check.apple(show.applePosition[0], show.applePosition[1], show.snakePosition[0])) var.score++;
             show.moves++;
-            Thread.Sleep(100 - (var.score * 2 < 99 ? var.score * 2 : 99));
+            Thread.Sleep(100 - (var.score * 2 < 90 ? var.score * 2 : 90));
         }
         Console.SetCursorPosition(62, 2);
-        Console.Write("Du tapte!");
+        if (var.score > 180) Console.Write("Du tapte!");
+        else Console.Write("Du vant!");
 }

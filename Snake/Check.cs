@@ -8,8 +8,6 @@ namespace Snake
 {
     internal class Check
     {
-
-
         public bool collision(List<List<int>> position, int height, int width)
         {
             for(var i = 1; i < position.Count; i++)
