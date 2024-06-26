@@ -27,6 +27,6 @@ void run()
             Thread.Sleep(100 - (var.score * 2 < 90 ? var.score * 2 : 90));
         }
         Console.SetCursorPosition(62, 2);
-        if (var.score > 180) Console.Write("Du tapte!");
+        if (var.score < 3481) Console.Write("Du tapte!");
         else Console.Write("Du vant!");
 }
