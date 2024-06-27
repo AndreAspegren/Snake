@@ -19,16 +19,16 @@ namespace Snake
             switch (key)
             {
                 case ConsoleKey.UpArrow:
-                    direction = "Up";
+                    direction = direction != "Down" ? "Up" :  direction;
                     break;
                 case ConsoleKey.DownArrow:
-                    direction = "Down";
+                    direction = direction != "Up" ? "Down" : direction;
                     break;
                 case ConsoleKey.LeftArrow:
-                    direction = "Left";
+                    direction = direction != "Right" ? "Left" : direction;
                     break;
                 case ConsoleKey.RightArrow:
-                    direction = "Right";
+                    direction = direction != "Left" ? "Right" : direction;
                     break;
             }
             Thread.Sleep(1000);

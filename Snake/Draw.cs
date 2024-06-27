@@ -80,15 +80,15 @@ namespace Snake
                 applePosition.Add(random.Next(6, height - 1));
                 applePosition.Add(random.Next(6, width - 1));
             }
+            else if (snake[0] == applePosition[0] && snake[1] == applePosition[1])
+            {
+                applePosition.Clear();
+                applePosition.Add(random.Next(6, height - 1));
+                applePosition.Add(random.Next(6, width - 1));
+            }
 
-            if (snake[0] == applePosition[0] && snake[1] == applePosition[1]) applePosition.Clear();
-
-            
-            applePosition.Add(random.Next(6, height - 1)); 
-            applePosition.Add(random.Next(6, width - 1)); 
             Console.SetCursorPosition(applePosition[0], applePosition[1]); 
             Console.Write("U");
-            
         }
 
         public void score(int score)
